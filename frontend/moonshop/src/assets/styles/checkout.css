@@ -1,0 +1,196 @@
+/* Base Styles */
+
+
+.checkout-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-page h1 {
+    text-align: center;
+    color: #F08700;
+    font-weight: 700;
+}
+
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Checkout Page Layout */
+.checkout-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-summary, .shipping-details {
+    flex: 1 1 45%;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Summary */
+.cart-summary h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.cart-summary .empty-cart {
+    text-align: center;
+}
+
+.cart-summary .empty-cart a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cart-summary h3 {
+    color: #333;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+/* Shipping Details */
+.shipping-details h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.shipping-details h3 {
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 5px;
+    color: #F08700;
+}
+
+.shipping-details label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.shipping-details input,
+.shipping-details select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.shipping-details select {
+    background: #fff;
+}
+
+/* Payment Section */
+.payment-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.payment-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.payment-section .num-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.payment-section .num-input p {
+    margin: 0;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.payment-section .num-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Buttons */
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #157F1F;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.checkout-button:hover {
+    background: #031926;
+    color: #F08700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.checkout-content {
+    flex-direction: column;
+}
+
+.cart-summary, .shipping-details {
+    flex: 1 1 100%;
+}
+
+.payment-section {
+    margin-top: 20px;
+}
+}
+
+@media (max-width: 480px) {
+.checkout-page {
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    font-size: 18px;
+}
+
+.cart-summary h3, 
+.shipping-details h3, 
+.payment-section h3 {
+    font-size: 16px;
+}
+
+.checkout-button {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.payment-section .num-input input {
+    font-size: 14px;
+}
+}

@@ -1,0 +1,119 @@
+   if response.status_code == 200:
+            json_response = response.json()
+            if json_response.get("ResponseCode") == "0":  # Success response
+                return {
+                    "message": "STK push request sent successfully.",
+                    "CheckoutRequestID": json_response.get("CheckoutRequestID"),
+                    "response": json_response,
+                }
+            else:
+                return {
+                    "error": "Failed to send STK push request.",
+                    "details": json_response,
+                }
+        else:
+            return {
+                "error": "Failed to send STK push request.",
+                "status_code": response.status_code,
+                "details": response.json(),
+            }
+
+
+const handleSTKPush = () => {
+    if (!/^\d{9}$/.test(mobileNumber)) {
+      alert("Please enter a valid 9-digit phone number after '254'.");
+      return;
+    }
+
+    const fullMobileNumber = `254${mobileNumber}`;
+    const paymentInfo = { mobileNumber: fullMobileNumber, cartTotal, cart_code};
+
+    api.post("mpesa/submit/", paymentInfo)
+    .then((response) => {
+      const data = response.data || {};
+      console.log(data)
+
+      if (data.status === 'ok') {
+        alert("STK Push initiated! Check your phone to complete payment.");
+        navigate("/payment-summary", {
+          state: {
+            transaction_id: data.transaction_id || 'N/A',
+            cartTotal,
+          },
+        });
+      } else {
+        alert(data.message || "Failed to initiate STK Push. Please try again.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("An unexpected error occurred. Please try again.");
+    });
+  };
+
+  const handleManualPayment = () => {
+    alert(
+      `Please pay Ksh ${cartTotal} to the following details:\n\nPaybill Number: 123456\nAccount Number: Your Order ID`
+    );
+  };
+
+
+  //This are some of the chechout forms
+
+  <input
+            type="text"
+            name="fullName"
+            placeholder="Full Name"
+            value={userDetails.fullName}
+            onChange={handleUserDetailsChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={userDetails.email}
+            onChange={handleUserDetailsChange}
+          />
+          <input
+            type="text"
+            name="address"
+            placeholder="Shipping Address"
+            value={userDetails.address}
+            onChange={handleUserDetailsChange}
+          />
+
+        {/* Contact section */}
+        <div className="contact-section">
+        <h2 className="contact-header">Contant Us</h2>
+        <form className="contact-form">
+            <div className="form-group">
+            <input
+                type="text"
+                name="name"
+                id="name"
+                className="form-input"
+                placeholder="Your Name"
+                required />
+            </div>
+            <div className="form-group">
+            <input
+                type="email"
+                name="email"
+                id="email"
+                className="form-input"
+                placeholder="Your Email"
+                required />
+            </div>
+            <div className="form-group">
+            <textarea
+                name="message"
+                id="message"
+                className="form-textarea"
+                placeholder="Your Message"
+                rows={5}
+                required>
+            </textarea>
+            </div>
+            <Button type="submit" className="form-button" variant="primary">Send Message</Button>
+        </form>
+        </div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edffec;
+            color: #031926;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #031926;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            color: #157f1f;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Thank You for Your Payment!</h1>
+        <p>Hi {{ user_name }},</p>
+        <p>We have successfully received your payment.</p>
+        <p><strong>Transaction ID:</strong> {{ transaction_id }}</p>
+        <p><strong>Total Amount Paid:</strong> Ksh {{ total_amount }}</p>
+        <p>If you have any questions, feel free to contact us.</p>
+        <p>Best regards,<br>MoonPrints-Africa Team</p>
+        <div class="footer">© 2025 MoonPrints-Africa. All rights reserved.</div>
+    </div>
+</body>
+</html>

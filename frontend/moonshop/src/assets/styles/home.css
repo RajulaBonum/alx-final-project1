@@ -1,0 +1,124 @@
+.home-page {
+    font-family: 'Arial', sans-serif;
+    color: #031926;
+    background: #fff;
+    padding: 20px;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-caption h3 {
+    color: #F08700;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.carousel-caption p {
+    color: #EDFFEC;
+    font-size: 1rem;
+}
+
+.product-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.product-section h2 {
+    color: #F08700;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+/* This is the why section */
+.why-section {
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.why-section h2 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    color: #F08700; /* Accent color */
+    font-size: 2em;
+}
+
+.why-container {
+    margin-top: 40px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.why-card {
+    min-width: 150px;
+    min-height: auto;
+    max-height: 200px;
+    border: 2px solid #EDFFEC; /* Light green border */
+    background-color: #031926; /* Rich black background */
+    padding: 10px;
+    text-align: center;
+    color: #fff; /* Light green text */
+    border-radius: 7px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card p {
+    color: #fff;
+}
+
+.why-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.why-card img {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Small screens */
+@media screen and (max-width: 576px) {
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.faq-section {
+    max-width: 70%;
+    margin: 20PX auto;
+}
+
+.faq-section h2 {
+    color: #031926;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.accordion-item {
+    background: #EDFFEC;
+    border: 1px solid #157F1F;
+}
+
+.accordion-button {
+    background: #031926;
+    color: #EDFFEC;
+    font-weight: bold;
+}
+
+.accordion-body {
+    color: #031926;
+    font-size: 1rem;
+}

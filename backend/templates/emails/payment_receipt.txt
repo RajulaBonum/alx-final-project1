@@ -1,0 +1,14 @@
+Payment Receipt
+
+Dear {{ user_name }},
+
+Thank you for your payment. Here are the details:
+
+Amount: {{ amount }}
+Transaction ID: {{ transaction_id }}
+Date: {{ date }}
+
+If you have any questions, feel free to contact us.
+
+-- 
+Moonprints-Africa

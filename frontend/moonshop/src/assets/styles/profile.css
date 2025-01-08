@@ -1,0 +1,145 @@
+/* Profile Page Styling */
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #4caf50;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin: 12px 0;
+}
+
+.profile-info .btn {
+  padding: 12px 18px;
+  font-size: 1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #4caf50;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.profile-info .btn.edit-btn {
+  background: #2196f3;
+}
+
+.profile-info .btn.cancel-btn {
+  background: #f44336;
+}
+
+.profile-info .btn:hover {
+  opacity: 0.9;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.profile-actions .btn {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-actions .btn.orders-btn {
+  background: #2196f3;
+}
+
+.profile-actions .btn.logout-btn {
+  background: #f44336;
+}
+
+.profile-actions .btn:hover {
+  opacity: 0.9;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.change-pass-link {
+  color: #4caf50 !important;
+  cursor: pointer;
+  font-size: 11px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+
+  .profile-actions .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

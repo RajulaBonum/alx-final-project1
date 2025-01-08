@@ -1,0 +1,151 @@
+/* orderSummary.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #EDFFEC;
+  color: #031926;
+}
+
+.order-summary-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-summary-title {
+  font-size: 2.5rem;
+  color: #031926;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.order-summary-loading,
+.order-summary-error {
+  font-size: 1.2rem;
+  color: #D52941;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order-summary-empty {
+  font-size: 1.2rem;
+  color: #031926;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order-summary-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.order-summary-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-summary-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-code {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #031926;
+}
+
+.status-badge {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background-color: #F08700;
+}
+
+.status-badge.in_transit {
+  background-color: #031926;
+}
+
+.status-badge.completed {
+  background-color: #157F1F;
+}
+
+.order-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  font-size: 0.95rem;
+  color: #031926;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #EDFFEC;
+  padding-bottom: 5px;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.back-to-products {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/*.back-to-products-btn {
+  background: linear-gradient(135deg, #F08700, #D52941);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.back-to-products-btn:hover {
+  background: linear-gradient(135deg, #D52941, #F08700);
+}*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-summary-title {
+    font-size: 2rem;
+  }
+
+  .order-summary-card {
+    padding: 15px;
+  }
+
+  .back-to-products-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
