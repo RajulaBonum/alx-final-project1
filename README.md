@@ -56,23 +56,30 @@ The Django backend powers the business logic and API endpoints for the platform:
 
 ### **Frontend Directory**  
 ```plaintext
-src/
-├── components/        # Reusable UI components
-├── pages/             # Main pages like Homepage, Products, Cart, etc.
-├── assets/styles         # Custom CSS files
-├── apis/             # Utility functions (e.g., Axios configurations)
-├── App.jsx            # Root component
-└── main.jsx           # Entry point
+Frontend/
+├── src/
+│   ├── apis/
+│   ├── assets/
+│   │   ├── styles/
+│   │   └── images/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── routes/
+│   ├── ui/
+│   ├── App.jsx
+│   └── Main.jsx
 ```
 
-### **Backend Directory**  
+### ** Backend Directory**
 ```plaintext
-backend/
-├── backend/           # Main app (project settings and configurations)
-├── core/              # User authentication and password management
-├── shop_app/          # E-commerce functionality (products, cart, orders)
-├── mpesa_app/         # Payment integration with M-PESA
-└── manage.py          # Django management script
+Backend/
+├── backend/
+├── core/
+├── mpesa_api/
+├── shop_app/
+└── templates/
+    └── emails/
 ```
 
 ---
